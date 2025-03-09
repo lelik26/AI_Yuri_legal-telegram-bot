@@ -11,4 +11,8 @@ venv.bak
 .git
 .env
 secret/
+<<<<<<< HEAD
 .idea
+=======
+.idea
+>>>>>>> f22ea7de322c278b270b1704e9a9bb54cd2e3255
