@@ -1,14 +1,18 @@
 # /legal_bot/bot.py
 import asyncio
+import os
 
 from aiogram import Bot, Dispatcher
 from aiogram.fsm.storage.memory import MemoryStorage
 from aiogram.types import BotCommand
-from config import BOT_TOKEN
+
+# from config import BOT_TOKEN
 from legal_bot.dispatcher import setup_dispatcher
 from logs.logger import setup_logger
 
 logger = setup_logger(__name__)
+
+BOT_TOKEN = os.getenv("BOT_TOKEN")
 
 
 async def set_default_commands(bot: Bot):
