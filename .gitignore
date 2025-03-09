@@ -9,5 +9,3 @@ build
 .env
 credentials.json
 secrets/
-
-
