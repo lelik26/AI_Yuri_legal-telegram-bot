@@ -9,6 +9,6 @@ ENV
 env.bak
 venv.bak
 .git
-config/.env
+.env
 secret/
 .idea
