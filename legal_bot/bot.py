@@ -1,7 +1,6 @@
 # /legal_bot/bot.py
 import asyncio
-import sys
-import os
+
 from aiogram import Bot, Dispatcher
 from aiogram.fsm.storage.memory import MemoryStorage
 from aiogram.types import BotCommand
@@ -10,7 +9,7 @@ from legal_bot.dispatcher import setup_dispatcher
 from logs.logger import setup_logger
 
 logger = setup_logger(__name__)
-sys.path.append(os.path.abspath(os.path.dirname(__file__)))  # Добавляем текущую папку в PYTHONPATH
+
 
 async def set_default_commands(bot: Bot):
     commands = [
