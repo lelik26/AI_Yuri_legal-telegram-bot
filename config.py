@@ -1,5 +1,8 @@
 import os
 
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker
+
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -13,6 +16,9 @@ OPENAI_ASSISTANT_ID = os.getenv("OPENAI_ASSISTANT_ID")
 DATABASE_URL = os.getenv("DATABASE_URL")
 MY_SECRET_KEY = os.getenv("MY_SECRET_KEY")
 DATA_BASE = os.getenv("DATA_BASE")
+
+engine = create_engine(DATABASE_URL)
+SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 # Доступ к таблице
 GOOGLE_CREDENTIALS_PATH = os.getenv("GOOGLE_CREDENTIALS_PATH")
