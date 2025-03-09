@@ -6,6 +6,6 @@ __pycache__/
 dist
 build
 .DS_Store
-config/.env
+.env
 credentials.json
 secrets/
