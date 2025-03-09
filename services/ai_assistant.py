@@ -4,8 +4,8 @@ import logging
 import openai
 import traceback
 from typing import Optional
-import  config.config
-import config.system_prompt
+import config
+import system_prompt
 
 
 logger = logging.getLogger(__name__)
@@ -24,11 +24,11 @@ def get_ai_response(user_message: str) -> Optional[str]:
             raise ValueError("Некорректный запрос: пустое сообщение или превышена длина 4000 символов")
 
         # Инициализация клиента OpenAI
-        client = openai.OpenAI(api_key=config.config.OPENAI_API_KEY)
+        client = openai.OpenAI(api_key=config.OPENAI_API_KEY)
 
         # Используем уже существующий Assistant.
-        assistant_id = config.config.OPENAI_ASSISTANT_ID
-        instructions = config.system_prompt.SYSTEM_PROMPT
+        assistant_id = config.OPENAI_ASSISTANT_ID
+        instructions = system_prompt.SYSTEM_PROMPT
         # Предполагается, что в настройках ассистента уже прописаны:
         # 1. Системная инструкция (указана в Playground)
         # 2. База знаний с ID "vs_67c13a7425548191ba20b82812e9b89f"

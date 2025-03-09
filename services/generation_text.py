@@ -1,5 +1,5 @@
 # services/generation_text.py
-from config.config import EMOJI_NUMBERS
+from config import EMOJI_NUMBERS
 
 def generate_faq_text(faq_entries):
     """

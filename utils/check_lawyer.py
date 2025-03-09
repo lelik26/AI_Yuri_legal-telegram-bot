@@ -1,5 +1,5 @@
 from aiogram import types
-from config.config import LAWYER_IDS
+from config import LAWYER_IDS
 
 def is_lawyer(user_id: int) -> bool:
     """Проверяет, является ли пользователь администратором."""

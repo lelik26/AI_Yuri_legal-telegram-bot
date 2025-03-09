@@ -1,5 +1,5 @@
 from aiogram import types
-from config.config import ADMIN_IDS
+from config import ADMIN_IDS
 
 def is_admin(user_id: int) -> bool:
     """Проверяет, является ли пользователь администратором."""

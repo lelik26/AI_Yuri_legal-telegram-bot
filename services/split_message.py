@@ -1,6 +1,6 @@
 # services/split_message
 
-from config.config import MAX_LENGTH_TEXT_TELEGRAM, MAX_LENGTH_LINE_BUTTON_TELEGRAM
+from config import MAX_LENGTH_TEXT_TELEGRAM, MAX_LENGTH_LINE_BUTTON_TELEGRAM
 
 def split_message(text ):
 

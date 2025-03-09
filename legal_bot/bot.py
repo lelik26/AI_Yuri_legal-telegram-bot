@@ -5,7 +5,7 @@ import os
 from aiogram import Bot, Dispatcher
 from aiogram.fsm.storage.memory import MemoryStorage
 from aiogram.types import BotCommand
-from config.config import BOT_TOKEN
+from config import BOT_TOKEN
 from legal_bot.dispatcher import setup_dispatcher
 from logs.logger import setup_logger
 

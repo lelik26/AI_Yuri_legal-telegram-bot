@@ -1,7 +1,7 @@
 # logs/logger.py
 import logging
 from logging.handlers import RotatingFileHandler
-from config.config import LOG_FORMAT, LOG_FILE
+from config import LOG_FORMAT, LOG_FILE
 
 def setup_logger(name: str) -> logging.Logger:
     logger = logging.getLogger(name)

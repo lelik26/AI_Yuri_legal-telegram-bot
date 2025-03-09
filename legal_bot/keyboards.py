@@ -1,12 +1,11 @@
 # legal_bot/keyboards.py
 from sqlalchemy.orm import Session
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
-from datetime import datetime, timedelta
 from database.models import Lawyer, ScheduleConsultation
 from database.repository import get_available_lawyers, get_free_time_slots
 from database.base import SessionLocal
 from logs.logger import setup_logger
-from config.config import EMOJI_NUMBERS
+from config import EMOJI_NUMBERS
 
 logger = setup_logger(__name__)
 

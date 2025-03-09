@@ -8,14 +8,13 @@ from aiogram.types import ReplyKeyboardRemove
 
 from database.base import SessionLocal
 from database.repository import save_consultation, get_lawyer_by_id, get_free_time_slots, generate_schedule
-from handlers.lawyer import lawyer
 from legal_bot.keyboards import (
     phone_keyboard,
     generate_date_keyboard,
     choose_lawyer_keyboard,
     generate_time_keyboard
 )
-from config.config import DURATION_WORKING_HOUR
+from config import DURATION_WORKING_HOUR
 from logs.logger import setup_logger
 
 logger = setup_logger(__name__)
