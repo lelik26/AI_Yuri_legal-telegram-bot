@@ -13,11 +13,11 @@ OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 OPENAI_ASSISTANT_ID = os.getenv("OPENAI_ASSISTANT_ID")
 
 # Доступ к базе данных
-DATABASE_URL = os.getenv("DATABASE_URL")
+DATABASE_PUBLIC_URL = os.getenv("DATABASE_PUBLIC_URL")
 MY_SECRET_KEY = os.getenv("MY_SECRET_KEY")
 DATA_BASE = os.getenv("DATA_BASE")
 
-engine = create_engine(DATABASE_URL)
+engine = create_engine(DATABASE_PUBLIC_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 # Доступ к таблице
